@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+/* Default theme (pastel) — overridden by ThemeProvider via data-theme */
+:root,
+[data-theme="pastel"] {
+  --color-bg: #fff9f5;
+  --color-bg-alt: #fff0eb;
+  --color-surface: #ffffff;
+  --color-text: #5c4a4a;
+  --color-text-muted: #9a7f7f;
+  --color-primary: #f4a4b8;
+  --color-primary-hover: #e88aa3;
+  --color-secondary: #c9e4de;
+  --color-accent: #ffeaa7;
+  --color-border: #f5ddd6;
+  --color-ring: #f4a4b8;
+  --color-hero-from: #ffeef5;
+  --color-hero-to: #e8f6f3;
+}
+
+@theme inline {
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-text);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+/* Decorative flourishes */
+.cookie-pattern {
+  background-image: radial-gradient(
+      circle at 20% 30%,
+      var(--color-primary) 0,
+      transparent 8%
+    ),
+    radial-gradient(circle at 80% 70%, var(--color-secondary) 0, transparent 8%);
+  background-size: 120px 120px;
+  opacity: 0.15;
+}
+
+.contract-prose h2 {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.contract-prose h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.contract-prose p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
