@@ -16,8 +16,8 @@ A custom sugar cookie business website built with **Next.js 16**, featuring a pa
 ## Getting started
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
@@ -63,8 +63,8 @@ Each signed document includes a timestamp, signature image, and SHA-256 integrit
 ## Deploy
 
 ```bash
-npm run build
-npm start
+pnpm build
+pnpm start
 ```
 
 Compatible with Vercel, Netlify, or any Node.js host. Remember to configure persistent storage for production.
